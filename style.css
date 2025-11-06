@@ -5,6 +5,7 @@ body {
     padding: 0;
     min-height: 100vh;
     color: #fff;
+    transition: background 0.3s ease;
 }
 
 nav {
@@ -188,6 +189,100 @@ footer p {
     margin: 0;
     white-space: pre-wrap;
     word-wrap: break-word;
+}
+
+.workflow-list {
+    text-align: left;
+    display: inline-block;
+}
+
+/* Enhanced animations */
+@keyframes slideOut {
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Notification styles */
+.notification {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Quiz styles */
+.quiz-option:hover {
+    background: rgba(255,255,255,0.2) !important;
+    transform: translateX(5px);
+}
+
+/* Code playground styles */
+.code-playground textarea {
+    transition: border-color 0.3s ease;
+}
+
+.code-playground textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Search styles */
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Theme toggle styles */
+#theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Print styles are handled in JavaScript */
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+    #search-toggle, #theme-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    #search-toggle {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #theme-toggle {
+        top: 15px;
+        right: 15px;
+    }
+
+    .code-playground > div {
+        grid-template-columns: 1fr !important;
+    }
+
+    #share-container button {
+        padding: 6px 12px !important;
+        font-size: 14px !important;
+    }
 }
 
 .workflow-list {

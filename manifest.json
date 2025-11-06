@@ -1,0 +1,52 @@
+{
+    "name": "Web Training Project",
+    "short_name": "WebTraining",
+    "description": "A comprehensive web development training project with interactive tutorials",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#decc69",
+    "theme_color": "#d09848",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-US",
+    "categories": ["education", "productivity", "utilities"],
+    "icons": [
+        {
+            "src": "/icon-192x192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512x512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "HTML Basics",
+            "short_name": "Basics",
+            "description": "Learn HTML and CSS fundamentals",
+            "url": "/basics.html",
+            "icons": [{ "src": "/icon-192x192.svg", "sizes": "192x192" }]
+        },
+        {
+            "name": "JavaScript",
+            "short_name": "JS",
+            "description": "Interactive JavaScript tutorials",
+            "url": "/javascript.html",
+            "icons": [{ "src": "/icon-192x192.svg", "sizes": "192x192" }]
+        },
+        {
+            "name": "CSS Styling",
+            "short_name": "CSS",
+            "description": "Advanced CSS techniques",
+            "url": "/css.html",
+            "icons": [{ "src": "/icon-192x192.svg", "sizes": "192x192" }]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}
