@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Web Training Project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        button {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #333;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Training Project</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Contact Us</h1>
+    <p>Have questions about our training program? Want to get started? We'd love to hear from you!</p>
+
+    <div class="contact-form">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h2>Other Ways to Reach Us</h2>
+        <p><strong>Email:</strong> info@webtrainingproject.com</p>
+        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p><strong>Address:</strong> 123 Web Development Street, Code City, CC 12345</p>
+        <p><strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <ul class="content-list">
+        <li><strong>How long does the training take?</strong><br>Our courses are self-paced, so you can complete them at your own speed.</li>
+        <li><strong>Do I need prior experience?</strong><br>No prior experience is required. We start from the basics.</li>
+        <li><strong>Is there a certificate?</strong><br>Yes, you'll receive a certificate upon completion of each course.</li>
+        <li><strong>Can I access the content offline?</strong><br>Most content can be downloaded for offline viewing.</li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2024 Web Training Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

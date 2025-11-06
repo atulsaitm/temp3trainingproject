@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Accessibility - Web Training Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Training Project</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Web Accessibility</h1>
+    <p>Learn how to create inclusive websites that work for everyone, including people with disabilities. Web accessibility ensures equal access to information and functionality.</p>
+
+    <h2>Why Accessibility Matters</h2>
+    <ul class="content-list">
+        <li><strong>Inclusive Design</strong><br>Everyone deserves equal access to information</li>
+        <li><strong>Legal Requirements</strong><br>Many countries have accessibility laws (ADA, WCAG)</li>
+        <li><strong>Better SEO</strong><br>Accessible sites rank better in search engines</li>
+        <li><strong>Wider Audience</strong><br>Reach more users including those with disabilities</li>
+        <li><strong>Future-Proof</strong><br>Works with assistive technologies and new devices</li>
+    </ul>
+
+    <h2>WCAG Guidelines</h2>
+    <p>Web Content Accessibility Guidelines (WCAG) provide the international standard for web accessibility.</p>
+
+    <h3>Four Principles (POUR)</h3>
+    <ul class="content-list">
+        <li><strong>Perceivable</strong><br>Information must be presentable to users in ways they can perceive</li>
+        <li><strong>Operable</strong><br>User interface components must be operable by all users</li>
+        <li><strong>Understandable</strong><br>Information and operation must be understandable</li>
+        <li><strong>Robust</strong><br>Content must be robust enough to work with current and future technologies</li>
+    </ul>
+
+    <h2>Semantic HTML</h2>
+    <p>Use semantic HTML elements to provide meaning and structure to your content.</p>
+    <div class="code-block">
+        <pre><code>&lt;!-- Good: Semantic HTML --&gt;
+&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h1&gt;Article Title&lt;/h1&gt;
+        &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2024 Company&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+    </div>
+
+    <h2>Alternative Text for Images</h2>
+    <p>Always provide descriptive alt text for images.</p>
+    <div class="code-block">
+        <pre><code>&lt;!-- Good alt text --&gt;
+&lt;img src="puppy.jpg" alt="Golden retriever puppy playing in grass"&gt;
+
+&lt;!-- Bad alt text --&gt;
+&lt;img src="puppy.jpg" alt="puppy"&gt;
+&lt;img src="puppy.jpg" alt=""&gt; &lt;!-- Empty alt for decorative images --&gt;
+
+&lt;!-- Decorative images --&gt;
+&lt;img src="divider.png" alt="" role="presentation"&gt;</code></pre>
+    </div>
+
+    <h2>Color and Contrast</h2>
+    <p>Ensure sufficient color contrast for readability.</p>
+    <div class="info-box">
+        <h3>WCAG Contrast Requirements</h3>
+        <ul>
+            <li>Normal text: 4.5:1 contrast ratio</li>
+            <li>Large text (18pt+): 3:1 contrast ratio</li>
+            <li>Graphics and UI: 3:1 contrast ratio</li>
+        </ul>
+    </div>
+
+    <div class="code-block">
+        <pre><code>/* Good contrast */
+.text-primary {
+    color: #000000;
+    background: #ffffff;
+}
+
+/* Poor contrast - avoid */
+.text-bad {
+    color: #777777;
+    background: #999999;
+}</code></pre>
+    </div>
+
+    <h2>Keyboard Navigation</h2>
+    <p>Ensure all interactive elements are accessible via keyboard.</p>
+    <div class="code-block">
+        <pre><code>/* Focus styles for keyboard navigation */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Skip links for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 6px;
+}</code></pre>
+    </div>
+
+    <h2>Forms and Labels</h2>
+    <p>Properly label form elements for screen readers.</p>
+    <div class="code-block">
+        <pre><code>&lt;!-- Good: Explicit labels --&gt;
+&lt;label for="email"&gt;Email Address&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+
+&lt;!-- Good: Implicit labels --&gt;
+&lt;label&gt;
+    Email Address
+    &lt;input type="email" name="email"&gt;
+&lt;/label&gt;
+
+&lt;!-- Bad: No labels --&gt;
+&lt;input type="email" placeholder="Email Address"&gt;</code></pre>
+    </div>
+
+    <h2>ARIA Attributes</h2>
+    <p>Use ARIA attributes when semantic HTML isn't sufficient.</p>
+    <div class="code-block">
+        <pre><code>&lt;!-- ARIA labels --&gt;
+&lt;button aria-label="Close menu"&gt;×&lt;/button&gt;
+
+&lt;!-- ARIA describedby --&gt;
+&lt;input type="password" aria-describedby="password-help"&gt;
+&lt;div id="password-help"&gt;Must be at least 8 characters&lt;/div&gt;
+
+&lt;!-- ARIA live regions for dynamic content --&gt;
+&lt;div aria-live="polite" aria-atomic="true"&gt;
+    &lt;!-- Dynamic content updates --&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <h2>Media Accessibility</h2>
+    <ul class="content-list">
+        <li><strong>Video</strong><br>Provide captions, transcripts, and audio descriptions</li>
+        <li><strong>Audio</strong><br>Include transcripts and captions for podcasts/videos</li>
+        <li><strong>Animations</strong><br>Respect user's motion preferences (prefers-reduced-motion)</li>
+    </ul>
+
+    <div class="code-block">
+        <pre><code>/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}</code></pre>
+    </div>
+
+    <h2>Testing Accessibility</h2>
+    <ul class="content-list">
+        <li><strong>Automated Tools</strong><br>WAVE, axe, Lighthouse accessibility audits</li>
+        <li><strong>Manual Testing</strong><br>Keyboard navigation, screen reader testing</li>
+        <li><strong>Color Contrast Checkers</strong><br>Online tools to verify contrast ratios</li>
+        <li><strong>User Testing</strong><br>Test with users who have disabilities</li>
+    </ul>
+
+    <h2>Common Accessibility Mistakes</h2>
+    <ul class="content-list">
+        <li>Missing alt text on images</li>
+        <li>Poor color contrast</li>
+        <li>Missing form labels</li>
+        <li>Non-keyboard accessible elements</li>
+        <li>Missing focus indicators</li>
+        <li>Auto-playing media without controls</li>
+        <li>Complex navigation without skip links</li>
+    </ul>
+
+    <h2>Resources</h2>
+    <ul class="content-list">
+        <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">WCAG Guidelines</a></li>
+        <li><a href="https://webaim.org/" target="_blank" rel="noopener">WebAIM</a></li>
+        <li><a href="https://www.a11yproject.com/" target="_blank" rel="noopener">The A11Y Project</a></li>
+        <li><a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE Accessibility Tool</a></li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2024 Web Training Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

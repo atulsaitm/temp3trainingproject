@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals - Web Training Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Training Project</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>JavaScript Fundamentals</h1>
+    <p>Learn the core concepts of JavaScript programming. From variables and functions to DOM manipulation and event handling.</p>
+
+    <h2>Getting Started with JavaScript</h2>
+    <p>JavaScript is a programming language that adds interactivity to web pages. It can be added to HTML in three ways:</p>
+    <ul class="content-list">
+        <li><strong>Internal JavaScript</strong><br>&lt;script&gt; tags in HTML</li>
+        <li><strong>External JavaScript</strong><br>&lt;script src="script.js"&gt;&lt;/script&gt;</li>
+        <li><strong>Inline JavaScript</strong><br>Event handlers in HTML attributes</li>
+    </ul>
+
+    <h2>Variables and Data Types</h2>
+    <div class="code-block">
+        <pre><code>// Variable declarations
+let name = "John";           // String
+const age = 25;              // Number
+var isStudent = true;        // Boolean
+let scores = [85, 92, 78];   // Array
+let person = {               // Object
+    name: "John",
+    age: 25,
+    isStudent: true
+};</code></pre>
+    </div>
+
+    <h2>Functions</h2>
+    <p>Functions are reusable blocks of code that perform specific tasks.</p>
+    <div class="code-block">
+        <pre><code>// Function declaration
+function greetUser(name) {
+    return `Hello, ${name}!`;
+}
+
+// Function expression
+const calculateArea = function(width, height) {
+    return width * height;
+};
+
+// Arrow function
+const multiply = (a, b) => a * b;
+
+// Function call
+console.log(greetUser("Alice"));</code></pre>
+    </div>
+
+    <h2>Control Flow</h2>
+
+    <h3>Conditional Statements</h3>
+    <div class="code-block">
+        <pre><code>let temperature = 25;
+
+if (temperature > 30) {
+    console.log("It's hot!");
+} else if (temperature > 20) {
+    console.log("It's warm.");
+} else {
+    console.log("It's cool.");
+}
+
+// Ternary operator
+let message = temperature > 20 ? "Warm" : "Cool";</code></pre>
+    </div>
+
+    <h3>Loops</h3>
+    <div class="code-block">
+        <pre><code>// For loop
+for (let i = 0; i < 5; i++) {
+    console.log(`Count: ${i}`);
+}
+
+// For...of loop (arrays)
+let fruits = ["apple", "banana", "orange"];
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+
+// While loop
+let count = 0;
+while (count < 3) {
+    console.log(`While count: ${count}`);
+    count++;
+}</code></pre>
+    </div>
+
+    <h2>DOM Manipulation</h2>
+    <p>The Document Object Model (DOM) represents the structure of HTML documents.</p>
+    <div class="code-block">
+        <pre><code>// Selecting elements
+const heading = document.getElementById("myHeading");
+const paragraphs = document.querySelectorAll("p");
+const button = document.querySelector(".btn");
+
+// Changing content
+heading.textContent = "New Heading";
+heading.innerHTML = "&lt;strong&gt;Bold Heading&lt;/strong&gt;";
+
+// Modifying styles
+heading.style.color = "blue";
+heading.style.fontSize = "24px";
+
+// Adding/removing classes
+heading.classList.add("highlight");
+heading.classList.remove("old-class");
+heading.classList.toggle("active");</code></pre>
+    </div>
+
+    <h2>Event Handling</h2>
+    <p>Events allow JavaScript to respond to user interactions.</p>
+    <div class="code-block">
+        <pre><code>// Method 1: HTML attribute
+// &lt;button onclick="handleClick()"&gt;Click me&lt;/button&gt;
+
+// Method 2: Event listener
+const button = document.querySelector("#myButton");
+
+button.addEventListener("click", function() {
+    console.log("Button clicked!");
+});
+
+// Method 3: Arrow function
+button.addEventListener("click", () => {
+    button.textContent = "Clicked!";
+});
+
+// Common events: click, mouseover, mouseout, keydown, submit</code></pre>
+    </div>
+
+    <h2>Arrays and Objects</h2>
+
+    <h3>Array Methods</h3>
+    <div class="code-block">
+        <pre><code>let numbers = [1, 2, 3, 4, 5];
+
+// Adding elements
+numbers.push(6);        // [1, 2, 3, 4, 5, 6]
+numbers.unshift(0);     // [0, 1, 2, 3, 4, 5, 6]
+
+// Removing elements
+numbers.pop();          // [0, 1, 2, 3, 4, 5]
+numbers.shift();        // [1, 2, 3, 4, 5]
+
+// Transforming arrays
+let doubled = numbers.map(num => num * 2);     // [2, 4, 6, 8, 10]
+let even = numbers.filter(num => num % 2 === 0); // [2, 4]
+let sum = numbers.reduce((acc, num) => acc + num, 0); // 15</code></pre>
+    </div>
+
+    <h3>Working with Objects</h3>
+    <div class="code-block">
+        <pre><code>let user = {
+    name: "John",
+    age: 30,
+    email: "john@example.com"
+};
+
+// Accessing properties
+console.log(user.name);        // "John"
+console.log(user["age"]);      // 30
+
+// Adding/modifying properties
+user.city = "New York";
+user.age = 31;
+
+// Object methods
+let keys = Object.keys(user);      // ["name", "age", "email", "city"]
+let values = Object.values(user);  // ["John", 31, "john@example.com", "New York"]
+
+// Destructuring
+let { name, age } = user;
+console.log(name, age);            // "John" 31</code></pre>
+    </div>
+
+    <h2>Asynchronous JavaScript</h2>
+    <div class="code-block">
+        <pre><code>// Promises
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Data loaded!");
+        }, 1000);
+    });
+}
+
+fetchData()
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+
+// Async/await
+async function loadData() {
+    try {
+        const result = await fetchData();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+    </div>
+
+    <h2>Best Practices</h2>
+    <ul class="content-list">
+        <li>Use <code>const</code> by default, <code>let</code> when reassignment is needed</li>
+        <li>Use descriptive variable and function names</li>
+        <li>Comment your code for clarity</li>
+        <li>Handle errors appropriately</li>
+        <li>Use modern ES6+ features when possible</li>
+        <li>Test your code thoroughly</li>
+    </ul>
+
+    <h2>Next Steps</h2>
+    <p>Continue your learning journey with our other tutorials:</p>
+    <ul class="content-list">
+        <li><a href="responsive.html">Responsive Design</a></li>
+        <li><a href="accessibility.html">Web Accessibility</a></li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2024 Web Training Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

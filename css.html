@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling - Web Training Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Training Project</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Advanced CSS Styling</h1>
+    <p>Master modern CSS techniques including flexbox, grid, animations, and advanced selectors. Learn how to create beautiful, responsive layouts.</p>
+
+    <h2>CSS Layout Techniques</h2>
+
+    <h3>Flexbox</h3>
+    <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns.</p>
+    <div class="code-block">
+        <pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1;
+    min-width: 200px;
+}</code></pre>
+    </div>
+
+    <h3>CSS Grid</h3>
+    <p>Grid is a two-dimensional layout method for creating complex layouts with rows and columns.</p>
+    <div class="code-block">
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background: #f0f0f0;
+    padding: 20px;
+}</code></pre>
+    </div>
+
+    <h2>CSS Animations & Transitions</h2>
+
+    <h3>Transitions</h3>
+    <p>Smooth property changes from one value to another.</p>
+    <div class="code-block">
+        <pre><code>.button {
+    background: #007bff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}</code></pre>
+    </div>
+
+    <h3>Keyframes Animation</h3>
+    <p>Create complex animations with multiple steps.</p>
+    <div class="code-block">
+        <pre><code>@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.element {
+    animation: fadeIn 0.5s ease-out;
+}</code></pre>
+    </div>
+
+    <h2>Advanced Selectors</h2>
+    <ul class="content-list">
+        <li><strong>Attribute Selectors</strong><br>input[type="text"] { border: 1px solid #ccc; }</li>
+        <li><strong>Pseudo-classes</strong><br>:hover, :focus, :nth-child(even)</li>
+        <li><strong>Pseudo-elements</strong><br>::before, ::after, ::first-line</li>
+        <li><strong>Combinators</strong><br>Descendant (space), Child (>), Adjacent (+), General Sibling (~)</li>
+    </ul>
+
+    <h2>Modern CSS Features</h2>
+
+    <h3>CSS Custom Properties (Variables)</h3>
+    <div class="code-block">
+        <pre><code>:root {
+    --primary-color: #007bff;
+    --font-size: 16px;
+    --spacing: 20px;
+}
+
+.button {
+    background: var(--primary-color);
+    font-size: var(--font-size);
+    padding: var(--spacing);
+}</code></pre>
+    </div>
+
+    <h3>CSS Functions</h3>
+    <ul class="content-list">
+        <li><strong>calc()</strong><br>width: calc(100% - 20px);</li>
+        <li><strong>min(), max(), clamp()</strong><br>font-size: clamp(1rem, 2vw, 2rem);</li>
+        <li><strong>rgb(), hsl()</strong><br>background: hsl(220, 100%, 50%);</li>
+        <li><strong>linear-gradient(), radial-gradient()</strong><br>background: linear-gradient(45deg, #ff0000, #0000ff);</li>
+    </ul>
+
+    <h2>Responsive Design</h2>
+    <p>Use media queries to create responsive layouts that adapt to different screen sizes.</p>
+    <div class="code-block">
+        <pre><code>/* Mobile first */
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}</code></pre>
+    </div>
+
+    <h2>CSS Best Practices</h2>
+    <ul class="content-list">
+        <li>Use semantic class names and avoid presentational names</li>
+        <li>Organize CSS with a logical structure</li>
+        <li>Use CSS variables for maintainable code</li>
+        <li>Minimize specificity conflicts</li>
+        <li>Test across different browsers and devices</li>
+        <li>Use modern CSS features with fallbacks</li>
+    </ul>
+
+    <h2>Next Steps</h2>
+    <p>Ready to take your CSS skills further? Explore our other tutorials:</p>
+    <ul class="content-list">
+        <li><a href="javascript.html">JavaScript Fundamentals</a></li>
+        <li><a href="responsive.html">Responsive Design</a></li>
+        <li><a href="accessibility.html">Web Accessibility</a></li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2024 Web Training Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

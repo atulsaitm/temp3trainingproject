@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics - Web Training Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Training Project</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>HTML & CSS Basics</h1>
+    <p>Learn the fundamental building blocks of modern web development. This guide covers everything you need to know to get started with HTML and CSS.</p>
+
+    <h2>HTML Fundamentals</h2>
+    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It provides the structure and content of your website.</p>
+
+    <h3>Basic HTML Structure</h3>
+    <div class="code-block">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h3>Common HTML Elements</h3>
+    <ul class="content-list">
+        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong><br>Headings - h1 is the most important, h6 is the least</li>
+        <li><strong>&lt;p&gt;</strong><br>Paragraphs of text</li>
+        <li><strong>&lt;a&gt;</strong><br>Links to other pages or resources</li>
+        <li><strong>&lt;img&gt;</strong><br>Images and graphics</li>
+        <li><strong>&lt;ul&gt; and &lt;ol&gt;</strong><br>Unordered and ordered lists</li>
+        <li><strong>&lt;div&gt;</strong><br>Generic container for grouping elements</li>
+    </ul>
+
+    <h2>CSS Fundamentals</h2>
+    <p>CSS (Cascading Style Sheets) controls the appearance and layout of your HTML elements. It separates content from presentation.</p>
+
+    <h3>Adding CSS to HTML</h3>
+    <ul class="content-list">
+        <li><strong>External CSS</strong><br>&lt;link rel="stylesheet" href="style.css"&gt;</li>
+        <li><strong>Internal CSS</strong><br>&lt;style&gt; in the &lt;head&gt; section</li>
+        <li><strong>Inline CSS</strong><br>style attribute on HTML elements</li>
+    </ul>
+
+    <h3>CSS Syntax</h3>
+    <div class="code-block">
+        <pre><code>selector {
+    property: value;
+    another-property: another-value;
+}</code></pre>
+    </div>
+
+    <h3>Common CSS Properties</h3>
+    <ul class="content-list">
+        <li><strong>color</strong><br>Text color (e.g., color: #ff0000;)</li>
+        <li><strong>font-size</strong><br>Text size (e.g., font-size: 16px;)</li>
+        <li><strong>background-color</strong><br>Background color (e.g., background-color: #f0f0f0;)</li>
+        <li><strong>width & height</strong><br>Element dimensions (e.g., width: 100px;)</li>
+        <li><strong>margin & padding</strong><br>Spacing around and inside elements</li>
+        <li><strong>border</strong><br>Element borders (e.g., border: 1px solid #000;)</li>
+    </ul>
+
+    <h2>The Box Model</h2>
+    <p>Every HTML element is treated as a rectangular box. The box model consists of content, padding, border, and margin.</p>
+
+    <div class="info-box">
+        <h4>Box Model Diagram</h4>
+        <p>Margin → Border → Padding → Content</p>
+    </div>
+
+    <h2>Selectors</h2>
+    <ul class="content-list">
+        <li><strong>Element Selector</strong><br>p { color: blue; } - selects all &lt;p&gt; elements</li>
+        <li><strong>Class Selector</strong><br>.highlight { background: yellow; } - selects elements with class="highlight"</li>
+        <li><strong>ID Selector</strong><br>#header { font-size: 24px; } - selects element with id="header"</li>
+        <li><strong>Universal Selector</strong><br>* { margin: 0; } - selects all elements</li>
+    </ul>
+
+    <h2>Next Steps</h2>
+    <p>Now that you understand the basics, explore our other tutorials to learn advanced CSS techniques, JavaScript, responsive design, and web accessibility.</p>
+
+    <ul class="content-list">
+        <li><a href="css.html">Advanced CSS Styling</a></li>
+        <li><a href="javascript.html">JavaScript Fundamentals</a></li>
+        <li><a href="responsive.html">Responsive Design</a></li>
+        <li><a href="accessibility.html">Web Accessibility</a></li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2024 Web Training Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

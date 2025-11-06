@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design - Web Training Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Training Project</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Responsive Web Design</h1>
+    <p>Learn how to create websites that work beautifully on all devices - from mobile phones to desktop computers.</p>
+
+    <h2>Why Responsive Design Matters</h2>
+    <ul class="content-list">
+        <li><strong>Mobile Usage</strong><br>Over 60% of web traffic comes from mobile devices</li>
+        <li><strong>SEO Benefits</strong><br>Google favors mobile-friendly websites</li>
+        <li><strong>User Experience</strong><br>Consistent experience across all devices</li>
+        <li><strong>Future-Proof</strong><br>Adapts to new screen sizes automatically</li>
+    </ul>
+
+    <h2>Viewport Meta Tag</h2>
+    <p>The viewport meta tag ensures proper rendering on mobile devices.</p>
+    <div class="code-block">
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+    </div>
+
+    <h2>Media Queries</h2>
+    <p>Media queries allow you to apply different styles based on device characteristics.</p>
+    <div class="code-block">
+        <pre><code>/* Mobile first approach */
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Small tablets and up */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Medium tablets and up */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Large tablets and up */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}</code></pre>
+    </div>
+
+    <h2>Flexible Layouts</h2>
+
+    <h3>Fluid Grids</h3>
+    <p>Use percentages instead of fixed pixel widths for flexible layouts.</p>
+    <div class="code-block">
+        <pre><code>.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .column {
+        width: 33.333%;
+    }
+}</code></pre>
+    </div>
+
+    <h3>Flexbox for Responsive Layouts</h3>
+    <div class="code-block">
+        <pre><code>.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-item {
+        flex: 1;
+        min-width: 250px;
+    }
+}</code></pre>
+    </div>
+
+    <h3>CSS Grid</h3>
+    <div class="code-block">
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}</code></pre>
+    </div>
+
+    <h2>Responsive Images</h2>
+    <div class="code-block">
+        <pre><code>/* Responsive images */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Picture element for art direction */
+&lt;picture&gt;
+    &lt;source media="(min-width: 768px)" srcset="large.jpg"&gt;
+    &lt;source media="(min-width: 480px)" srcset="medium.jpg"&gt;
+    &lt;img src="small.jpg" alt="Responsive image"&gt;
+&lt;/picture&gt;
+
+/* CSS for responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+    </div>
+
+    <h2>Responsive Typography</h2>
+    <div class="code-block">
+        <pre><code>/* Fluid typography using clamp() */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Responsive line height */
+.text-responsive {
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    .text-responsive {
+        line-height: 1.6;
+    }
+}</code></pre>
+    </div>
+
+    <h2>Mobile-First Design</h2>
+    <p>Start with mobile styles and progressively enhance for larger screens.</p>
+    <div class="info-box">
+        <h3>Mobile-First Workflow</h3>
+        <ol class="workflow-list">
+            <li>Design for mobile first (320px+)</li>
+            <li>Add tablet styles (768px+)</li>
+            <li>Add desktop styles (1024px+)</li>
+            <li>Test on real devices</li>
+        </ol>
+    </div>
+
+    <h2>Common Responsive Patterns</h2>
+    <ul class="content-list">
+        <li><strong>Navigation</strong><br>Hamburger menu for mobile, horizontal for desktop</li>
+        <li><strong>Content Priority</strong><br>Most important content first on mobile</li>
+        <li><strong>Touch Targets</strong><br>Minimum 44px touch targets on mobile</li>
+        <li><strong>Performance</strong><br>Optimize images and reduce HTTP requests</li>
+    </ul>
+
+    <h2>Testing Responsive Design</h2>
+    <ul class="content-list">
+        <li><strong>Browser DevTools</strong><br>Use device emulation in Chrome/Firefox</li>
+        <li><strong>Real Devices</strong><br>Test on actual phones and tablets</li>
+        <li><strong>Online Tools</strong><br>Responsinator, BrowserStack, or similar services</li>
+        <li><strong>Cross-Browser Testing</strong><br>Ensure compatibility across browsers</li>
+    </ul>
+
+    <h2>Performance Considerations</h2>
+    <ul class="content-list">
+        <li>Use appropriate image formats (WebP, AVIF)</li>
+        <li>Implement lazy loading for images</li>
+        <li>Minimize CSS and JavaScript</li>
+        <li>Use CSS Grid and Flexbox instead of floats</li>
+        <li>Optimize font loading</li>
+    </ul>
+
+    <h2>Next Steps</h2>
+    <p>Complete your web development education with accessibility:</p>
+    <ul class="content-list">
+        <li><a href="accessibility.html">Web Accessibility</a></li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2024 Web Training Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

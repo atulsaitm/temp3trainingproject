@@ -163,3 +163,34 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* Tutorial specific styles */
+.code-block {
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    overflow-x: auto;
+}
+
+.info-box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.code-block pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.workflow-list {
+    text-align: left;
+    display: inline-block;
+}
